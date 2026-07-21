@@ -2,12 +2,13 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <style>
     td:nth-child(even), th:nth-child(even) {
-  background-color: #D6EEEE;
-}
+      background-color: #D6EEEE;
+    }
   </style>
   <script>
-    let produrl = "https://prodlist.2ckwaibaj6nn.us-south.codeengine.appdomain.cloud/"
-    let dealerurl = "https://dealerdetails.2ckwaibaj6nn.us-south.codeengine.appdomain.cloud/"
+
+    let produrl = "https://prodlist.xj562h09ws5.us-south.codeengine.appdomain.cloud/";
+    let dealerurl = "https://dealerdetails.19l7kymq2p3d.us-south.codeengine.appdomain.cloud/";
 
     axios.get(produrl+"products").then(res=>{
       let selEl = document.createElement("select");
@@ -56,8 +57,8 @@
         dealers.childNodes.forEach(node=>dealers.removeChild(node));
         dealers.appendChild(selEl);
         })
+      }
     }
-  }
   
     let getDealerProductPrice = ()=>{
       let prodvalToFetch = document.getElementById("selProd").value;
@@ -86,17 +87,12 @@
         })
       }
     }
-    
 
-</script>
-<h1>
+  </script>
+  <h1>
     Products price comparison
     <div style='margin:6mm' id='prod_dd'></div>
     <div style='margin:6mm' id='dealers'></div>
     <div style='margin:6mm;font-size: large;' id='pricing'></div>
-
-</h1>
-
-
-
+  </h1>
 </html>
